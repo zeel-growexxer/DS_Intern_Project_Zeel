@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+cloudpickle
+joblib
+scikit-learn

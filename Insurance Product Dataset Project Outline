@@ -1,0 +1,41 @@
+Input source: File in Local Machine
+
+
+File count: 1
+
+
+Type: Batch
+
+
+AWS s3: Put a batch of the file in a folder inside s3 bucket via Airflow
+
+
+Transformations in Lambda:
+	1. Column Rename
+	2. Data type casting
+	3. Sanity check 
+		1. age youngest should be less than and age oldest
+		2. state code must be of 2 characters
+	4. Row wise check to drop a complete row if it has more than 50% columns having Null values
+	5. Drop the rows having Null as the target value
+
+
+RDS: Store the data into RDS (Postgres Database) via Lambda function
+
+
+Machine Learning
+	Pre processing
+	EDA
+	Feature engineering + Data Encoding
+	Model selection
+	Model Training and Evaluation
+
+	
+Dashboard: Power BI
+ 
+ 
+LLM: UI + Training/Queries
+
+
+Ques: DEMO [Complete System/ ETL P-1 
+			     ML - P2]

@@ -1,0 +1,82 @@
+from datetime import datetime, timedelta
+import os
+import boto3
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+from pyspark.sql import SparkSession
+
+# Set up AWS S3 client
+s3_client = boto3.client('s3')
+
+# Configuration
+BUCKET_NAME = 'your-s3-bucket-name'
+INPUT_FILE_KEY = 'input/data.csv'
+OUTPUT_FOLDER = 'batches'
+BATCH_SIZE = 1000
+
+# Define the DAG
+default_args = {
+    'owner': 'airflow',
+    'depends_on_past': False,
+    'start_date': datetime(2023, 1, 1),
+    'retries': 1,
+    'retry_delay': timedelta(minutes=5),
+}
+
+dag = DAG(
+    'daily_batch_creation',
+    default_args=default_args,
+    description='Daily batch creation DAG',
+    schedule_interval=timedelta(days=1),
+)
+
+def check_and_create_batches():
+    # Initialize Spark session
+    spark = SparkSession.builder \
+        .appName("DailyBatchCreation") \
+        .getOrCreate()
+
+    # Download the CSV file from S3
+    obj = s3_client.get_object(Bucket=BUCKET_NAME, Key=INPUT_FILE_KEY)
+    data = obj['Body'].read().decode('utf-8')
+
+    # Read data into Spark DataFrame
+    temp_csv_path = '/tmp/input_data.csv'
+    with open(temp_csv_path, 'w') as f:
+        f.write(data)
+
+    df = spark.read.csv(temp_csv_path, header=True, inferSchema=True)
+
+    # Get the timestamp for batch files
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+
+    # Check if there are new/unique records (assuming a 'unique_id' column)
+    unique_data = df.dropDuplicates(['unique_id'])
+    if unique_data.count() == 0:
+        print("No new/unique data found.")
+        return
+
+    # Create batches of 1000 rows and upload to S3
+    num_batches = (unique_data.count() + BATCH_SIZE - 1) // BATCH_SIZE
+    for batch_number in range(num_batches):
+        batch = unique_data.limit(BATCH_SIZE).offset(batch_number * BATCH_SIZE)
+        batch_filename = f"data_batch_{batch_number + 1}_{timestamp}.csv"
+        batch_filepath = f"/tmp/{batch_filename}"
+        batch.write.csv(batch_filepath, header=True)
+
+        # Upload batch to S3
+        for file in os.listdir(batch_filepath):
+            if file.endswith(".csv"):
+                s3_client.upload_file(os.path.join(batch_filepath, file), BUCKET_NAME, f"{OUTPUT_FOLDER}/{batch_filename}")
+
+    # Stop the Spark session
+    spark.stop()
+
+# Create a PythonOperator to execute the batch creation function
+create_batches_task = PythonOperator(
+    task_id='create_batches',
+    python_callable=check_and_create_batches,
+    dag=dag,
+)
+
+create_batches_task
