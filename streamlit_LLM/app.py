@@ -1,0 +1,231 @@
+import streamlit as st
+import requests
+import pandas as pd
+import plotly.express as px
+import json
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import psycopg2
+import os
+from dotenv import load_dotenv
+from langchain_core.runnables import RunnablePassthrough
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_groq import ChatGroq
+
+# Initialize Flask app
+app = Flask(__name__)
+CORS(app)
+
+# Load environment variables from credentials.env
+load_dotenv('credentials.env')
+
+# Function to establish connection with PostgreSQL database using psycopg2
+def connect_to_db():
+    return psycopg2.connect(
+        host=os.getenv('DB_HOST'),
+        port=os.getenv('DB_PORT'),
+        user=os.getenv('DB_USER'),
+        password=os.getenv('DB_PASSWORD'),
+        database=os.getenv('DB_NAME')
+    )
+
+# Function to fetch table and column information from the database schema
+def get_db_schema(conn, table_name):
+    cursor = conn.cursor()
+    cursor.execute(f"""
+        SELECT column_name
+        FROM information_schema.columns
+        WHERE table_schema='public' AND table_name='{table_name}'
+    """)
+    schema_info = [row[0] for row in cursor.fetchall()]
+    cursor.close()
+    return schema_info
+
+# Function to create SQL chain with quoted column names
+def create_sql_chain(conn, target_table, question):
+    schema_info = get_db_schema(conn, target_table)
+    quoted_schema_info = [f'"{col}"' if col in ['A', 'B', 'C', 'D', 'E', 'F', 'G'] else col for col in schema_info]
+
+    template = f"""
+        Based on the table schema of table '{target_table}', write a SQL query to answer the question.
+        If the question is on the dataset, the SQL query must take all the columns into consideration.
+        Only provide the SQL query, without any additional text or characters.
+        Ensure the query includes the table name {target_table} in the FROM clause.
+        If user asks a question related to correlation between 2 columns and if either column is non-numeric, display an appropriate message instead of calculating the correlation.
+        If the question is related to the column names in the dataset, please refer the schema {quoted_schema_info} to identify the column names.
+    
+        Table schema: {quoted_schema_info}
+        Question: {question}
+
+        SQL Query:
+    """
+    prompt = ChatPromptTemplate.from_template(template=template)
+    llm = ChatGroq(model="llama3-8b-8192", temperature=0.2, groq_api_key=os.getenv('InfoQuest_API_KEY'))
+
+    chain = (
+        RunnablePassthrough(assignments={"schema": quoted_schema_info, "question": question})
+        | prompt
+        | llm
+        | StrOutputParser()
+    )
+    return chain
+
+def execute_query(conn, query):
+    try:
+        cursor = conn.cursor()
+        cursor.execute(query)
+        colnames = [desc[0] for desc in cursor.description]  # Get column names
+        result = cursor.fetchall()
+        cursor.close()
+        return colnames, result
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+# Function to create natural language response based on SQL query results
+def create_nlp_answer(sql_query, results, question):
+    results_str = "\n".join([str(row) for row in results])
+
+    template = f"""
+        Based on the results of the SQL query '{sql_query}', write a natural language response.
+        Consider the initial {question} while generating the output in natural language.
+        Do not write "Based on the SQL query results" or "Therefore, the natural language response would be:" in the response.
+
+        Query Results:
+        {results_str}
+    """
+    prompt = ChatPromptTemplate.from_template(template=template)
+    llm = ChatGroq(model="llama3-8b-8192", temperature=0.2, groq_api_key=os.getenv('InfoQuest_API_KEY'))
+
+    return (
+        RunnablePassthrough(assignments={"sql_query": sql_query, "results": results_str, "question": question})
+        | prompt
+        | llm
+        | StrOutputParser()
+    )
+
+# Flask route to handle queries
+@app.route('/query', methods=['POST'])
+def handle_query():
+    data = request.get_json()
+    question = data.get('question')
+
+    if not question:
+        return jsonify({'error': 'Question not provided'}), 400
+
+    try:
+        conn = connect_to_db()
+        target_table = os.getenv('TABLE_NAME')
+        sql_chain = create_sql_chain(conn, target_table, question)
+        sql_query_response = sql_chain.invoke({})
+        sql_query = sql_query_response.strip()
+
+        colnames, results = execute_query(conn, sql_query)
+        nlp_chain = create_nlp_answer(sql_query, results, question)
+        nlp_response = nlp_chain.invoke({})
+
+        conn.close()
+
+        return jsonify({'response': nlp_response, 'results': {'colnames': colnames, 'data': results}}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+# Function to save session history to a JSON file
+def save_session_history(history):
+    with open('session_history.json', 'w') as f:
+        json.dump(history, f)
+
+# Function to load session history from a JSON file
+def load_session_history():
+    if os.path.exists('session_history.json'):
+        with open('session_history.json', 'r') as f:
+            return json.load(f)
+    return []
+
+def send_query(question):
+    response = requests.post('http://localhost:5000/query', json={'question': question})
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return {'error': 'Failed to get response from server'}
+
+def main():
+    st.title("InfoQuest")
+    st.markdown(
+        """
+        <style>
+        body { background-color: offwhite; }
+        .css-1yywi0x { background-color: #4CAF50; color: white; border-color: #4CAF50; }
+        .message-container { margin-bottom: 10px; }
+        .user-message { background-color: #EBECF0; padding: 10px; border-radius: 10px; text-align: right; color: black; }
+        .bot-message { background-color: #EBECF0; padding: 10px; border-radius: 10px; text-align: left; color: black; }
+        .label { font-weight: bold; margin-bottom: 5px; }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    if 'history' not in st.session_state:
+        st.session_state.history = load_session_history()
+    if 'selected_question' not in st.session_state:
+        st.session_state.selected_question = None
+
+    st.sidebar.title("Chat History")
+    for i, (msg, sender) in enumerate(st.session_state.history):
+        if sender == "User":
+            if st.sidebar.button(msg, key=f"history_{i}"):
+                st.session_state.selected_question = i
+
+    st.markdown("**Type your question here:**")
+    question = st.text_input("", key="input_question")
+
+    if st.button("Send"):
+        if question:
+            response = send_query(question)
+            st.session_state.history.append((question, "User"))
+            if isinstance(response, dict):
+                st.session_state.history.append((response.get('response'), "Bot"))
+                results = response.get('results')
+                if results:
+                    colnames = results['colnames']
+                    data = results['data']
+                    df = pd.DataFrame(data, columns=colnames)
+                    generate_visualization(df, question)
+            else:
+                st.session_state.history.append((response, "Bot"))
+
+            save_session_history(st.session_state.history)
+
+    if st.session_state.selected_question is not None:
+        selected_history = st.session_state.history[st.session_state.selected_question:]
+        for i, (msg, sender) in enumerate(selected_history):
+            if sender == "User":
+                st.markdown(f'<div class="label">You:</div><div class="message-container"><div class="user-message">{msg}</div></div>', unsafe_allow_html=True)
+            elif sender == "Bot":
+                st.markdown(f'<div class="label">Bot:</div><div class="message-container"><div class="bot-message">{msg}</div></div>', unsafe_allow_html=True)
+
+def generate_visualization(df, question):
+    visualized = False  # Flag to track if a visualization has been generated
+
+    for col in df.columns:
+        if not visualized:  # Only generate one visualization per question
+            if df[col].dtype == 'object':
+                if df[col].nunique() >= 10:
+                    # Bar plot for categorical data with more than 10 unique values
+                    fig = px.bar(df, x=col, title=f"Bar plot of {col}")
+                    fig.update_layout(xaxis_title=col, yaxis_title="Count", showlegend=True)
+                    st.plotly_chart(fig)
+                else:
+                    # Pie chart for categorical data with less than 10 unique values
+                    fig = px.pie(df, names=col, title=f"Pie chart of {col}")
+                    st.plotly_chart(fig)
+                visualized = True
+            elif df[col].dtype in ['int64', 'float64']:
+                # Histogram for numerical data
+                fig = px.histogram(df, x=col, title=f"Histogram of {col}")
+                fig.update_layout(xaxis_title=col, yaxis_title="Count", showlegend=True)
+                st.plotly_chart(fig)
+                visualized = True
+
+if __name__ == "__main__":
+    main()

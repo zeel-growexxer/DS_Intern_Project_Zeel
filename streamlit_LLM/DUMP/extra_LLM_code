@@ -1,0 +1,117 @@
+# from flask import Flask, request, jsonify
+# from flask_sqlalchemy import SQLAlchemy
+# from dotenv import load_dotenv, find_dotenv
+# import os
+# import psycopg2
+# from langchain_core.prompts import ChatPromptTemplate
+# from langchain_core.runnables import RunnablePassthrough
+# from langchain_core.output_parsers import StrOutputParser
+# from langchain_groq import ChatGroq
+# from pydantic import ValidationError
+
+# # Load environment variables from .env file
+# load_dotenv(find_dotenv('credentials.env'))
+
+# app = Flask(__name__)
+
+# # Print the DATABASE_URI to verify it is loaded
+# database_uri = os.getenv('DATABASE_URI')
+
+# # Configure PostgreSQL database
+# app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# db = SQLAlchemy(app)
+
+# # Initialize ChatGroq with LLaMA model and API key
+# infoquest_api_key = os.getenv('InfoQuest_API_KEY')
+# if not infoquest_api_key:
+#     raise ValueError("InfoQuest_API_KEY environment variable is not set")
+
+# # Initialize ChatGroq instance with appropriate model and API key
+# chat_groq = ChatGroq(model="llama3-8b-8192", api_key=infoquest_api_key)
+
+# # Define SQLAlchemy model for chat history
+# class ChatHistory(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     question = db.Column(db.String(255))
+#     response = db.Column(db.Text)
+
+# # Function to establish connection with PostgreSQL database using psycopg2
+# def connect_to_db(host: str, port: str, user: str, passwd: str, db_name: str):
+#     conn = psycopg2.connect(
+#         host=host,
+#         port=port,
+#         user=user,
+#         password=passwd,
+#         database=db_name
+#     )
+#     return conn
+
+# # Function to fetch table and column information from the database schema
+# def get_db_schema(conn, table_name):
+#     cursor = conn.cursor()
+#     cursor.execute(f"""
+#         SELECT column_name
+#         FROM information_schema.columns
+#         WHERE table_schema='public' AND table_name='{table_name}'
+#     """)
+#     schema_info = [row[0] for row in cursor.fetchall()]
+#     cursor.close()
+#     return schema_info
+
+# # Function to create SQL query generation chain using langchain_groq
+# def create_sql_chain(conn, target_table, question):
+#     schema_info = get_db_schema(conn, target_table)
+
+#     template = f"""
+#         Based on the table schema of table '{target_table}', write a SQL query to answer the question.
+
+#         Response Format:
+#             Question: {question}
+#             SQL Query:
+#     """
+#     prompt = ChatPromptTemplate.from_template(template=template)
+
+#     # Define the chain for generating SQL query
+#     chain = (
+#         RunnablePassthrough(assignments={"schema": schema_info, "question": question})
+#         | prompt
+#         | StrOutputParser()
+#     )
+
+#     return chain
+
+# # Endpoint to handle POST requests for queries
+# @app.route('/query', methods=['POST'])
+# def query():
+#     try:
+#         data = request.get_json()
+#         question = data.get('question')
+
+#         if not question:
+#             return jsonify({'error': 'No question provided'}), 400
+
+#         # Generate SQL query using langchain_groq chain
+#         conn = connect_to_db(os.getenv('DB_HOST'), os.getenv('DB_PORT'), os.getenv('DB_USER'), os.getenv('DB_PASSWORD'), os.getenv('DB_NAME'))
+#         chain = create_sql_chain(conn, 'insurance_policy_data', question)
+#         sql_query = chain.invoke({})  # Invoke the chain to generate SQL query
+#         conn.close()
+
+#         # Ensure the output from langchain_groq chain is converted to string
+#         response = str(sql_query.output) if sql_query.output else "No response from query"
+
+#         # Save question and response to database
+#         chat_entry = ChatHistory(question=question, response=response)
+#         db.session.add(chat_entry)
+#         db.session.commit()
+
+#         return jsonify({'response': response})
+
+#     except ValidationError as e:
+#         return jsonify({'error': f'Validation Error: {str(e)}'}), 400
+
+#     except Exception as e:
+#         return jsonify({'error': f'Error processing query: {str(e)}'}), 500
+
+# if __name__ == '__main__':
+#     app.run(debug=True)

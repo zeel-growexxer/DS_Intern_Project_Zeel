@@ -9,7 +9,7 @@ from pyspark.sql import SparkSession
 s3_client = boto3.client('s3')
 
 # Configuration
-BUCKET_NAME = 'your-s3-bucket-name'
+BUCKET_NAME = 'car-insurance-policy-bucket'
 INPUT_FILE_KEY = 'input/data.csv'
 OUTPUT_FOLDER = 'batches'
 BATCH_SIZE = 1000

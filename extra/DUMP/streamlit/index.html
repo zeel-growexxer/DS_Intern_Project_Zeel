@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Insurance Policy Price Prediction</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        label {
+            color: black;
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        form {
+            margin: auto;
+            width: 100%;
+            height: 80%;
+            padding: 20px;
+            background-color: powderblue;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Insurance Policy Price Prediction</h1>
+    <form action="http://127.0.0.1:8000/predict" method="post">
+        <label for="state_code">State Code:</label>
+        <input type="text" id="state_code" name="state_code"><br><br>
+
+        <label for="group_size">Group Size:</label>
+        <input type="number" id="group_size" name="group_size"><br><br>
+
+        <label for="homeowner">Homeowner:</label>
+        <input type="number" id="homeowner" name="homeowner"><br><br>
+        
+        <label for="car_age">Car Age:</label>
+        <input type="number" id="car_age" name="car_age" step="0.1"><br><br>
+
+        <label for="car_value">Car Value:</label>
+        <input type="text" id="car_value" name="car_value"><br><br>
+
+        <label for="risk_factor">Risk Factor:</label>
+        <input type="text" id="risk_factor" name="risk_factor"><br><br>
+
+        <label for="age_youngest">Age Youngest:</label>
+        <input type="number" id="age_youngest" name="age_youngest"><br><br>
+
+        <label for="married_couple">Married Couple:</label>
+        <input type="number" id="married_couple" name="married_couple"><br><br>
+
+        <label for="c_previous">C Previous:</label>
+        <input type="number" id="c_previous" name="c_previous"><br><br>
+
+        <label for="duration_previous">Duration Previous:</label>
+        <input type="number" id="duration_previous" name="duration_previous" step="0.1"><br><br>
+
+        <label for="A">A:</label>
+        <input type="number" id="A" name="A"><br><br>
+
+        <label for="B">B:</label>
+        <input type="number" id="B" name="B"><br><br>
+
+        <label for="C">C:</label>
+        <input type="number" id="C" name="C"><br><br>
+
+        <label for="E">E:</label>
+        <input type="number" id="E" name="E"><br><br>
+
+        <label for="F">F:</label>
+        <input type="number" id="F" name="F"><br><br>
+
+        <label for="G">G:</label>
+        <input type="number" id="G" name="G"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

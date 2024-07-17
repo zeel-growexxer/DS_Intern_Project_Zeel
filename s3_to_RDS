@@ -134,11 +134,11 @@ def lambda_handler(event, context):
         ]
         
         # Database connection parameters
-        db_host = os.environ['db_host']  # Change this to your RDS endpoint
-        db_port = os.environ['db_port']                                                     # Default port for PostgreSQL
-        db_name = os.environ['db_name']                                    # Change this to your database name
-        db_user = os.environ['db_user']                                                   # Change this to your database username
-        db_password = os.environ['db_password']                                        # Change this to your database password
+        db_host = os.environ[db_host]  # Change this to your RDS endpoint
+        db_port = os.environ[db_port]                                                     # Default port for PostgreSQL
+        db_name = os.environ[db_name]                                    # Change this to your database name
+        db_user = os.environ[db_user]                                                   # Change this to your database username
+        db_password = os.environ[db_password]                                        # Change this to your database password
         
         # Create the database connection string
         db_url = f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
@@ -146,7 +146,7 @@ def lambda_handler(event, context):
         
         # Create engine and connect
         engine = create_engine(db_url)
-        print('engine created')
+        # print('engine created')
         
         # Create table if not exists
         table = Table(table_name, metadata, *columns)
@@ -162,6 +162,8 @@ def lambda_handler(event, context):
                 print(f"Data inserted into {table_name} successfully")
         except Exception as e:
             print(f"An error occurred: {e}")
+
+    
     
     except Exception as e:
         print(f"Error: {e}")
