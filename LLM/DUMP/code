@@ -1,0 +1,315 @@
+import os
+# import psycopg2
+# from dotenv import load_dotenv
+
+# # Load environment variables from .env file
+# load_dotenv()
+
+# # Function to establish connection with PostgreSQL database using psycopg2
+# def connect_to_db():
+#     try:
+#         conn = psycopg2.connect(
+#             host=os.getenv('DATABASE_HOST'),
+#             port=os.getenv('DATABASE_PORT'),
+#             user=os.getenv('DATABASE_USER'),
+#             password=os.getenv('DATABASE_PASSWORD'),
+#             database=os.getenv('DATABASE_NAME')
+#         )
+#         print("Connected to the database successfully!")
+#         return conn
+#     except psycopg2.Error as e:
+#         print(f"Error connecting to database: {e}")
+#         return None
+
+# # Function to fetch table schema from the database
+# def fetch_table_schema(conn, table_name):
+#     try:
+#         cursor = conn.cursor()
+#         cursor.execute(f"SELECT column_name FROM information_schema.columns WHERE table_name = '{table_name}'")
+#         schema_info = [row[0] for row in cursor.fetchall()]
+#         cursor.close()
+#         return schema_info
+#     except psycopg2.Error as e:
+#         print(f"Error fetching table schema: {e}")
+#         return None
+
+# # Function to generate SQL query based on user question and table schema
+# def generate_sql_query(question, table_name, schema_info):
+#     try:
+#         # Initialize ChatGroq with the LLaMA model
+#         chat_groq = ChatGroq(model_name="llama3-70b-8192", api_key="your_api_key_here")
+        
+#         # Prepare the template for generating SQL query
+#         template = f"""
+#             Based on the schema of table '{table_name}', write a SQL query to answer the question.
+
+#             Question: {question}
+#             SQL Query:
+#         """
+        
+#         # Generate SQL query based on user question and table schema
+#         response = chat_groq.generate_query(question, schema_info)
+#         return response
+#     except Exception as e:
+#         print(f"Error generating SQL query: {e}")
+#         return None
+
+# # Function to execute SQL query on the database and fetch results
+# def execute_sql_query(conn, sql_query):
+#     try:
+#         cursor = conn.cursor()
+#         cursor.execute(sql_query)
+#         results = cursor.fetchall()
+#         cursor.close()
+#         return results
+#     except psycopg2.Error as e:
+#         print(f"Error executing SQL query: {e}")
+#         return None
+
+# # Main function to handle user interaction and database querying
+# def main():
+#     target_table = 'your_target_table'
+    
+#     # Establish connection with the database
+#     conn = connect_to_db()
+#     if conn is None:
+#         print("Failed to connect to the database.")
+#         return
+    
+#     try:
+#         while True:
+#             user_input = input(f"Ask a question about table '{target_table}' (type 'exit' to quit): ")
+#             if user_input.lower() in ["exit", "quit"]:
+#                 break
+            
+#             # Fetch table schema
+#             schema_info = fetch_table_schema(conn, target_table)
+            
+#             # Generate SQL query based on user input and table schema
+#             sql_query = generate_sql_query(user_input, target_table, schema_info)
+            
+#             if sql_query:
+#                 print(f"Generated SQL Query:\n{sql_query}\n")
+                
+#                 # Execute SQL query and fetch results
+#                 results = execute_sql_query(conn, sql_query)
+                
+#                 if results:
+#                     for row in results:
+#                         print(row)
+#                     print()
+#                 else:
+#                     print("No results found or error occurred.\n")
+#             else:
+#                 print("Failed to generate SQL query.\n")
+    
+#     except KeyboardInterrupt:
+#         print("\nExiting the application.")
+
+#     finally:
+#         if conn:
+#             conn.close()
+#             print("Disconnected from the database.")
+
+# if __name__ == "__main__":
+#     main()
+
+
+    
+# from flask import Flask, request, jsonify
+# from flask_sqlalchemy import SQLAlchemy
+# from dotenv import load_dotenv, find_dotenv
+# import os
+# import psycopg2
+# from langchain_groq import ChatGroq
+
+# # Load environment variables from .env file
+# load_dotenv(find_dotenv('credentials.env'))
+
+# app = Flask(__name__)
+
+# # Print the DATABASE_URI to verify it is loaded
+# database_uri = os.getenv('DATABASE_URI')
+# print(f"DATABASE_URI: {database_uri}")
+
+# # Configure PostgreSQL database
+# app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# db = SQLAlchemy(app)
+
+# # Initialize ChatGroq with LLaMA model and API key
+# infoquest_api_key = os.getenv('InfoQuest_API_KEY')
+# if not infoquest_api_key:
+#     raise ValueError("InfoQuest_API_KEY environment variable is not set")
+
+# chat_groq = ChatGroq(model_name="llama3-70b-8192", api_key=infoquest_api_key)
+
+# # Define SQLAlchemy model for chat history
+# class ChatHistory(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     question = db.Column(db.String(255))
+#     response = db.Column(db.Text)
+
+# # Function to establish connection with PostgreSQL database using psycopg2
+# def connect_to_db(host: str, port: str, user: str, passwd: str, db_name: str):
+#     conn = psycopg2.connect(
+#         host=host,
+#         port=port,
+#         user=user,
+#         password=passwd,
+#         database=db_name
+#     )
+#     return conn
+
+# # Function to execute SQL queries based on predefined templates
+# def execute_sql_query(question):
+#     # Define templates and corresponding SQL queries
+#     templates = {
+#         "list_all_columns": "SELECT column_name FROM information_schema.columns WHERE table_name='insurance_policy_data'",
+#         "count_rows": "SELECT COUNT(*) FROM insurance_policy_data",
+#         "average_car_age": "SELECT AVG(car_age) FROM insurance_policy_data",
+#         # Add more templates as needed
+#     }
+
+#     # Match question to template
+#     matched_template = None
+#     for template_key, template_sql in templates.items():
+#         if template_key in question.lower():
+#             matched_template = template_sql
+#             break
+
+#     # Execute SQL query if template matched
+#     if matched_template:
+#         try:
+#             result = db.session.execute(matched_template)
+#             db.session.commit()
+#             return result.fetchall()
+#         except Exception as e:
+#             db.session.rollback()
+#             return str(e)
+#     else:
+#         return "No matching template found."
+
+# # Function to generate SQL query based on user question using LLaMA model
+# def generate_sql_query(question):
+#     try:
+#         # Use ChatGroq with LLaMA model to generate response
+#         response = chat_groq.query(question)
+#         return response['response']
+#     except Exception as e:
+#         return str(e)
+
+# # Endpoint to handle POST requests for queries
+# @app.route('/query', methods=['POST'])
+# def query():
+#     data = request.get_json()
+#     question = data.get('question')
+
+#     if not question:
+#         return jsonify({'error': 'No question provided'}), 400
+
+#     if is_simple_query(question):  # Example function to detect simple vs complex queries
+#         # Execute SQL query based on matched template
+#         response = execute_sql_query(question)
+#     else:
+#         # Generate SQL query using LLaMA model
+#         response = generate_sql_query(question)
+
+#     # Save question and response to database
+#     chat_entry = ChatHistory(question=question, response=str(response))
+#     db.session.add(chat_entry)
+#     db.session.commit()
+
+#     return jsonify({'response': response})
+
+# # Function to detect simple vs complex queries (example)
+# def is_simple_query(question):
+#     # Implement your logic to determine if the query is simple or complex
+#     return "list all columns" in question.lower() or "count rows" in question.lower()
+
+# if __name__ == '__main__':
+#     app.run(debug=True)
+
+
+
+
+
+
+
+# from flask import Flask, request, jsonify
+# from flask_sqlalchemy import SQLAlchemy
+# from langchain_groq import ChatGroq
+# from dotenv import load_dotenv
+# import os
+# import psycopg2
+
+# # Load environment variables from .env file
+# load_dotenv()
+
+# app = Flask(__name__)
+
+# # Configure PostgreSQL database
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# db = SQLAlchemy(app)
+
+# # Initialize ChatGroq from langchain_groq with your API key
+# infoquest_api_key = os.getenv('InfoQuest_API_KEY')
+# if not infoquest_api_key:
+#     raise ValueError("InfoQuest_API_KEY environment variable is not set")
+
+# # Initialize ChatGroq with LLaMA3 70b model and API key
+# chat_groq = ChatGroq(model_name="llama3-70b-8192", api_key=infoquest_api_key)
+
+# # Define database model for chat history
+# class ChatHistory(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     question = db.Column(db.String(255))
+#     response = db.Column(db.Text)
+
+# # Function to generate SQL query based on user question
+# def generate_sql_query(question):
+#     # Connect to the PostgreSQL database
+#     conn = psycopg2.connect(os.getenv('DATABASE_URI'))
+#     cursor = conn.cursor()
+
+#     # Execute a query to retrieve schema information (example query)
+#     cursor.execute("""
+#         SELECT column_name
+#         FROM information_schema.columns
+#         WHERE table_schema='public'
+#         LIMIT 5
+#     """)
+
+#     # Construct the response SQL query based on the question
+#     response = "Generated SQL query based on your question."
+#     # Example: response = chat_groq.generate_response(question)
+
+#     # Close cursor and connection
+#     cursor.close()
+#     conn.close()
+
+#     return response
+
+# # Endpoint to handle POST requests for queries
+# @app.route('/query', methods=['POST'])
+# def handle_query():
+#     data = request.get_json()
+#     question = data.get('question')
+
+#     if not question:
+#         return jsonify({'error': 'No question provided'}), 400
+
+#     # Generate response (SQL query) using ChatGroq or custom logic
+#     response = generate_sql_query(question)
+
+#     # Save question and response to database
+#     chat_entry = ChatHistory(question=question, response=response)
+#     db.session.add(chat_entry)
+#     db.session.commit()
+
+#     return jsonify({'response': response})
+
+# if __name__ == '__main__':
+#     app.run(debug=True)
+

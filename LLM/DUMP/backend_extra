@@ -1,0 +1,457 @@
+# from flask import Flask, request, jsonify
+# import psycopg2
+# import os
+# from dotenv import load_dotenv
+# from langchain_core.runnables import RunnablePassthrough
+# from langchain_core.output_parsers import StrOutputParser
+# from langchain_core.prompts import ChatPromptTemplate
+# from langchain_groq import ChatGroq
+
+# app = Flask(__name__)
+
+# # Load environment variables from credentials.env
+# load_dotenv('credentials.env')
+
+# # Function to establish connection with PostgreSQL database using psycopg2
+# def connect_to_db(host: str, port: str, user: str, passwd: str, db_name: str):
+#     conn = psycopg2.connect(
+#         host=host,
+#         port=port,
+#         user=user,
+#         password=passwd,
+#         database=db_name
+#     )
+#     return conn
+
+# # Function to fetch table and column information from the database schema
+# def get_db_schema(conn, table_name):
+#     cursor = conn.cursor()
+#     cursor.execute(f"""
+#         SELECT column_name
+#         FROM information_schema.columns
+#         WHERE table_schema='public' AND table_name='{table_name}'
+#     """)
+#     schema_info = [row[0] for row in cursor.fetchall()]
+#     cursor.close()
+#     return schema_info
+
+# # Function to create SQL query generation chain
+# def create_sql_chain(conn, target_table, question):
+#     schema_info = get_db_schema(conn, target_table)
+
+#     template = f"""
+#         Based on the table schema of table '{target_table}', write a SQL query to answer the question.
+#         Only provide the SQL query, without any additional text or characters.
+
+#         Table schema: {schema_info}
+#         Question: {question}
+
+#         SQL Query:
+#     """
+#     prompt = ChatPromptTemplate.from_template(template=template)
+#     llm = ChatGroq(model="llama3-8b-8192", temperature=0.2, groq_api_key=os.getenv('InfoQuest_API_KEY'))
+
+#     return (
+#         RunnablePassthrough(assignments={"schema": schema_info, "question": question})
+#         | prompt
+#         | llm
+#         | StrOutputParser()
+#     )
+
+# # Function to execute SQL query on the database and fetch results
+# def execute_sql_query(conn, sql_query):
+#     cursor = conn.cursor()
+#     cursor.execute(sql_query)
+#     results = cursor.fetchall()
+#     cursor.close()
+#     return results
+
+# # Function to create natural language response based on SQL query results
+# def create_nlp_answer(sql_query, results):
+#     results_str = "\n".join([str(row) for row in results])
+
+#     template = f"""
+#         Based on the results of the SQL query '{sql_query}', write a natural language response.
+
+#         Query Results:
+#         {results_str}
+#     """
+#     prompt = ChatPromptTemplate.from_template(template=template)
+#     llm = ChatGroq(model="llama3-8b-8192", temperature=0.2, groq_api_key=os.getenv('InfoQuest_API_KEY'))
+
+#     return (
+#         RunnablePassthrough(assignments={"sql_query": sql_query, "results": results_str})
+#         | prompt
+#         | llm
+#         | StrOutputParser()
+#     )
+
+# @app.route('/query', methods=['POST'])
+# def handle_query():
+#     data = request.get_json()
+#     question = data.get('question')
+
+#     if not question:
+#         return jsonify({'error': 'Question not provided'}), 400
+
+#     hostname = os.getenv('DB_HOST')
+#     port = os.getenv('DB_PORT')
+#     username = os.getenv('DB_USER')
+#     password = os.getenv('DB_PASSWORD')
+#     database_name = os.getenv('DB_NAME')
+#     target_table = os.getenv('TABLE_NAME')
+
+#     try:
+#         conn = connect_to_db(hostname, port, username, password, database_name)
+#         schema_info = get_db_schema(conn, target_table)
+#         sql_chain = create_sql_chain(conn, target_table, question)
+#         sql_query_response = sql_chain.invoke({})
+#         sql_query = sql_query_response.strip()
+
+#         results = execute_sql_query(conn, sql_query)
+#         nlp_chain = create_nlp_answer(sql_query, results)
+#         nlp_response = nlp_chain.invoke({})
+
+#         conn.close()
+
+#         return jsonify({'response': nlp_response}), 200
+#     except Exception as e:
+#         print(f"Error: {str(e)}")  # Log error message
+#         return jsonify({'error': str(e)}), 500
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+
+
+
+
+
+# import os
+# from dotenv import load_dotenv
+# from flask import Flask, request, jsonify
+# from langchain_core.prompts import ChatPromptTemplate
+# from langchain_core.output_parsers import StrOutputParser
+# from langchain_core.runnables import RunnablePassthrough
+# from langchain_groq import ChatGroq
+# import psycopg2
+
+# app = Flask(__name__)
+
+# # Load environment variables from credentials.env
+# load_dotenv('credentials.env')
+
+# # Function to establish connection with PostgreSQL database using psycopg2
+# def connect_to_db(host: str, port: str, user: str, passwd: str, db_name: str):
+#     conn = psycopg2.connect(
+#         host=host,
+#         port=port,
+#         user=user,
+#         password=passwd,
+#         database=db_name
+#     )
+#     return conn
+
+# # Function to fetch table and column information from the database schema
+# def get_db_schema(conn, table_name):
+#     cursor = conn.cursor()
+#     cursor.execute(f"""
+#         SELECT column_name
+#         FROM information_schema.columns
+#         WHERE table_schema='public' AND table_name='{table_name}'
+#     """)
+#     schema_info = [row[0] for row in cursor.fetchall()]
+#     cursor.close()
+#     return schema_info
+
+# # Function to create SQL query generation chain
+# def create_sql_chain(conn, target_table, question):
+#     schema_info = get_db_schema(conn, target_table)
+
+#     template = f"""
+#         Based on the table schema of table '{target_table}', write a SQL query to answer the question.
+#         Only provide the SQL query, without any additional text or characters.
+
+#         Table schema: {schema_info}
+#         Question: {question}
+
+#         SQL Query:
+#     """
+#     prompt = ChatPromptTemplate.from_template(template=template)
+#     llm = ChatGroq(model="llama3-8b-8192", temperature=0.2, groq_api_key=os.getenv('InfoQuest_API_KEY'))
+
+#     return (
+#         RunnablePassthrough(assignments={"schema": schema_info, "question": question})
+#         | prompt
+#         | llm
+#         | StrOutputParser()
+#     )
+
+# # Function to execute SQL query on the database and fetch results
+# def execute_sql_query(conn, sql_query):
+#     cursor = conn.cursor()
+#     cursor.execute(sql_query)
+#     results = cursor.fetchall()
+#     cursor.close()
+#     return results
+
+# # Function to create natural language response based on SQL query results
+# def create_nlp_answer(sql_query, results):
+#     results_str = "\n".join([str(row) for row in results])
+
+#     template = f"""
+#         Based on the results of the SQL query '{sql_query}', write a natural language response.
+
+#         Query Results:
+#         {results_str}
+#     """
+#     prompt = ChatPromptTemplate.from_template(template=template)
+#     llm = ChatGroq(model="llama3-8b-8192", temperature=0.2, groq_api_key=os.getenv('InfoQuest_API_KEY'))
+
+#     return (
+#         RunnablePassthrough(assignments={"sql_query": sql_query, "results": results_str})
+#         | prompt
+#         | llm
+#         | StrOutputParser()
+#     )
+
+# @app.route('/query', methods=['POST'])
+# def handle_query():
+#     data = request.get_json()
+#     question = data['question']
+#     print(f"Received question: {question}")
+
+#     hostname = os.getenv('DB_HOST')
+#     port = os.getenv('DB_PORT')
+#     username = os.getenv('DB_USER')
+#     password = os.getenv('DB_PASSWORD')
+#     database_name = os.getenv('DB_NAME')
+#     target_table = os.getenv('TABLE_NAME')
+
+#     try:
+#         conn = connect_to_db(hostname, port, username, password, database_name)
+#         print("Connected to the database successfully!")
+#         schema_info = get_db_schema(conn, target_table)
+#         print(f"Table schema: {schema_info}")
+
+#         # Generate SQL query based on user input
+#         sql_chain = create_sql_chain(conn, target_table, question)
+#         sql_query_response = sql_chain.invoke({})
+#         sql_query = sql_query_response.strip()
+#         print(f"Generated SQL Query:\n{sql_query}")
+
+#         # Execute SQL query and fetch results
+#         results = execute_sql_query(conn, sql_query)
+#         if results:
+#             print(f"SQL Query Results:\n{results}")
+#             # Generate natural language response based on query results
+#             nlp_chain = create_nlp_answer(sql_query, results)
+#             nlp_response = nlp_chain.invoke({})
+#             print(f"Natural Language Response:\n{nlp_response}")
+
+#             # Close database connection
+#             conn.close()
+
+#             # Return JSON response with SQL query and natural language response
+#             return jsonify({
+#                 'sql_query': sql_query,
+#                 'nlp_response': nlp_response
+#             }), 200
+#         else:
+#             conn.close()
+#             return jsonify({'error': 'No results found or error occurred.'}), 404
+
+#     except psycopg2.Error as e:
+#         return jsonify({'error': f'Database error: {e}'}), 500
+#     except Exception as e:
+#         return jsonify({'error': f'Error: {e}'}), 500
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+
+
+
+
+# import os
+# from dotenv import load_dotenv
+# from langchain_core.prompts import ChatPromptTemplate
+# from langchain_core.runnables import RunnablePassthrough
+# from langchain_core.output_parsers import StrOutputParser
+# from langchain_groq import ChatGroq
+# import psycopg2
+# from flask import Flask, request, jsonify
+
+# # Load environment variables from credentials.env
+# load_dotenv('credentials.env')
+
+# app = Flask(__name__)
+
+# # Function to establish connection with PostgreSQL database using psycopg2
+# def connect_to_db(host: str, port: str, user: str, passwd: str, db_name: str):
+#     conn = psycopg2.connect(
+#         host=host,
+#         port=port,
+#         user=user,
+#         password=passwd,
+#         database=db_name
+#     )
+#     return conn
+
+# # Function to fetch table and column information from the database schema
+# def get_db_schema(conn, table_name):
+#     cursor = conn.cursor()
+#     cursor.execute(f"""
+#         SELECT column_name
+#         FROM information_schema.columns
+#         WHERE table_schema='public' AND table_name='{table_name}'
+#     """)
+#     schema_info = [row[0] for row in cursor.fetchall()]
+#     cursor.close()
+#     return schema_info
+
+# # Function to create SQL query generation chain
+# def create_sql_chain(conn, target_table, question):
+#     schema_info = get_db_schema(conn, target_table)
+    
+#     template = f"""
+#         Based on the table schema of table '{target_table}', write a SQL query to answer the question.
+#         Only provide the SQL query, without any additional text or characters.
+
+#         Table schema: {schema_info}
+#         Question: {question}
+
+#         SQL Query:
+#     """
+    
+#     prompt = ChatPromptTemplate.from_template(template=template)
+#     llm = ChatGroq(model="llama3-8b-8192", temperature=0.2, groq_api_key=os.getenv('InfoQuest_API_KEY'))
+    
+#     return (
+#         RunnablePassthrough(assignments={"schema": schema_info, "question": question})
+#         | prompt
+#         | llm
+#         | StrOutputParser()
+#     )
+
+# # Endpoint to handle incoming queries
+# @app.route('/query', methods=['POST'])
+# def handle_query():
+#     data = request.get_json()
+#     question = data.get('question')
+
+#     # Connect to database
+#     hostname = os.getenv('DB_HOST')
+#     port = os.getenv('DB_PORT')
+#     username = os.getenv('DB_USER')
+#     password = os.getenv('DB_PASSWORD')
+#     database_name = os.getenv('DB_NAME')
+#     target_table = os.getenv('TABLE_NAME')
+
+#     conn = connect_to_db(hostname, port, username, password, database_name)
+#     print("Connected to the database successfully!")
+
+#     # Generate SQL query using LLM
+#     sql_chain = create_sql_chain(conn, target_table, question)
+#     sql_query = sql_chain.invoke({})
+
+#     # Execute SQL query
+#     cursor = conn.cursor()
+#     cursor.execute(sql_query)
+#     result = cursor.fetchall()
+#     cursor.close()
+
+#     # Format result for response
+#     if result:
+#         response_text = ", ".join(map(str, result))  # Example formatting, customize as needed
+#     else:
+#         response_text = "No results found."
+
+#     conn.close()
+
+#     return jsonify({'response': response_text})
+
+# if __name__ == "__main__":
+#     app.run(debug=True)  # Run Flask app
+
+
+# import os
+# from dotenv import load_dotenv
+# from langchain_core.prompts import ChatPromptTemplate
+# from langchain_core.runnables import RunnablePassthrough
+# from langchain_core.output_parsers import StrOutputParser
+# from langchain_groq import ChatGroq
+# import psycopg2
+
+# # Load environment variables from credentials.env
+# load_dotenv('credentials.env')
+
+# # Function to establish connection with PostgreSQL database using psycopg2
+# def connect_to_db(host: str, port: str, user: str, passwd: str, db_name: str):
+#     conn = psycopg2.connect(
+#         host=host,
+#         port=port,
+#         user=user,
+#         password=passwd,
+#         database=db_name
+#     )
+#     return conn
+
+# # Function to fetch table and column information from the database schema
+# def get_db_schema(conn, table_name):
+#     cursor = conn.cursor()
+#     cursor.execute(f"""
+#         SELECT column_name
+#         FROM information_schema.columns
+#         WHERE table_schema='public' AND table_name='{table_name}'
+#     """)
+#     schema_info = [row[0] for row in cursor.fetchall()]
+#     cursor.close()
+#     return schema_info
+
+# # Function to create SQL query generation chain
+# def create_sql_chain(conn, target_table, question):
+#     schema_info = get_db_schema(conn, target_table)
+    
+#     template = f"""
+#         Based on the table schema of table '{target_table}', write a SQL query to answer the question.
+#         Only provide the SQL query, without any additional text or characters.
+
+#         Table schema: {schema_info}
+#         Question: {question}
+
+#         SQL Query:
+#     """
+    
+#     prompt = ChatPromptTemplate.from_template(template=template)
+#     llm = ChatGroq(model="llama3-8b-8192", temperature=0.2, groq_api_key=os.getenv('InfoQuest_API_KEY'))
+    
+#     return (
+#         RunnablePassthrough(assignments={"schema": schema_info, "question": question})
+#         | prompt
+#         | llm
+#         | StrOutputParser()
+#     )
+
+# def main():
+#     hostname = os.getenv('DB_HOST')
+#     port = os.getenv('DB_PORT')
+#     username = os.getenv('DB_USER')
+#     password = os.getenv('DB_PASSWORD')
+#     database_name = os.getenv('DB_NAME')
+#     target_table = os.getenv('TABLE_NAME')
+
+#     conn = connect_to_db(hostname, port, username, password, database_name)
+#     print("Connected to the database successfully!")
+
+#     user_query = input("Ask your database a question about " + target_table + ": ")
+
+#     sql_chain = create_sql_chain(conn, target_table, user_query)
+#     sql_query = sql_chain.invoke({})
+
+#     print(f"Generated SQL Query: {sql_query}")
+
+#     conn.close()
+
+# if __name__ == "__main__":
+#     main()
