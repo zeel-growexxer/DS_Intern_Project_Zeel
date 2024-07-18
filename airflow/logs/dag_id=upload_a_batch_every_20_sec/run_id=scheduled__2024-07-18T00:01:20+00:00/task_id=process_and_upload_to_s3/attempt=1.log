@@ -1,0 +1,22 @@
+[2024-07-18T12:30:34.311+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-18T12:30:34.319+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: upload_a_batch_every_20_sec.process_and_upload_to_s3 scheduled__2024-07-18T00:01:20+00:00 [queued]>
+[2024-07-18T12:30:34.323+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: upload_a_batch_every_20_sec.process_and_upload_to_s3 scheduled__2024-07-18T00:01:20+00:00 [queued]>
+[2024-07-18T12:30:34.323+0530] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-18T12:30:34.329+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): process_and_upload_to_s3> on 2024-07-18 00:01:20+00:00
+[2024-07-18T12:30:34.332+0530] {standard_task_runner.py:64} INFO - Started process 20474 to run task
+[2024-07-18T12:30:34.335+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'upload_a_batch_every_20_sec', 'process_and_upload_to_s3', 'scheduled__2024-07-18T00:01:20+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/car_insurance_policy_dag.py', '--cfg-path', '/tmp/tmpbw5iszwp']
+[2024-07-18T12:30:34.335+0530] {standard_task_runner.py:91} INFO - Job 8: Subtask process_and_upload_to_s3
+[2024-07-18T12:30:34.354+0530] {task_command.py:426} INFO - Running <TaskInstance: upload_a_batch_every_20_sec.process_and_upload_to_s3 scheduled__2024-07-18T00:01:20+00:00 [running]> on host growlt245
+[2024-07-18T12:30:34.380+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='upload_a_batch_every_20_sec' AIRFLOW_CTX_TASK_ID='process_and_upload_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2024-07-18T00:01:20+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-18T00:01:20+00:00'
+[2024-07-18T12:30:34.380+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-18T12:30:34.381+0530] {logging_mixin.py:188} INFO - Current working directory: /home/growlt245
+[2024-07-18T12:30:51.551+0530] {base.py:84} INFO - Using connection ID 'local_to_s3' for task execution.
+[2024-07-18T12:30:51.552+0530] {connection_wrapper.py:384} INFO - AWS Connection (conn_id='local_to_s3', conn_type='aws') credentials retrieved from login and password.
+[2024-07-18T12:31:00.404+0530] {car_insurance_policy_dag.py:35} INFO - Batch 5 uploaded successfully to car_insurance_raw_data/insurance_policy_data_batch_5_20240718123051.csv
+[2024-07-18T12:31:00.407+0530] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-07-18T12:31:00.425+0530] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-18T12:31:00.425+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-18T12:31:00.429+0530] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=upload_a_batch_every_20_sec, task_id=process_and_upload_to_s3, run_id=scheduled__2024-07-18T00:01:20+00:00, execution_date=20240718T000120, start_date=20240718T070034, end_date=20240718T070100
+[2024-07-18T12:31:00.449+0530] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-07-18T12:31:00.457+0530] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-18T12:31:00.457+0530] {local_task_job_runner.py:222} INFO - ::endgroup::
