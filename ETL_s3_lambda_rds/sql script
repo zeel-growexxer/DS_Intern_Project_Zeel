@@ -1,5 +1,4 @@
-DROP TABLE insurance_policy_data;
-CREATE TABLE insurance_policy_data (
+CREATE TABLE car_insurance_policy_data (
     customer_id INT,
     shopping_pt INT,
     record_type INT,
@@ -27,5 +26,4 @@ CREATE TABLE insurance_policy_data (
     cost INT
 );
 
-SELECT * FROM insurance_policy_data;
--- ORDER BY customer_id, shopping_pt;
+SELECT * FROM car_insurance_policy_data;
