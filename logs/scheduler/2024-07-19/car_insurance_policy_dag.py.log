@@ -1,0 +1,1187 @@
+[2024-07-19T08:55:19.160+0530] {processor.py:161} INFO - Started process (PID=154853) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:55:19.160+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:55:19.161+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:55:19.161+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:55:19.367+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:55:19.410+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:55:19.410+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:55:19.419+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:55:19.419+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T08:55:19.432+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.275 seconds
+[2024-07-19T08:56:08.363+0530] {processor.py:161} INFO - Started process (PID=155116) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:08.363+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:56:08.364+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:08.364+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:08.636+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:08.651+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:08.651+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a796b7490>
+[2024-07-19T08:56:08.652+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:08.652+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:56:08.659+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:08.659+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:56:08.668+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:08.668+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:01:40+00:00, run_after=2024-07-19 00:02:00+00:00
+[2024-07-19T08:56:08.684+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.324 seconds
+[2024-07-19T08:56:27.920+0530] {processor.py:161} INFO - Started process (PID=155225) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:27.921+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:56:27.922+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:27.921+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:28.159+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:28.172+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:28.172+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a796b7490>
+[2024-07-19T08:56:28.173+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:28.172+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:56:28.181+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:28.181+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:56:28.188+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:28.188+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:02:00+00:00, run_after=2024-07-19 00:02:20+00:00
+[2024-07-19T08:56:28.202+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.285 seconds
+[2024-07-19T08:56:28.229+0530] {processor.py:161} INFO - Started process (PID=155239) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:28.229+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:56:28.231+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:28.231+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:28.474+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:28.488+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:28.487+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a796b7490>
+[2024-07-19T08:56:28.488+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:28.488+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:56:28.496+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:28.495+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:56:28.504+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:28.503+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:02:00+00:00, run_after=2024-07-19 00:02:20+00:00
+[2024-07-19T08:56:28.515+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.291 seconds
+[2024-07-19T08:56:40.473+0530] {processor.py:161} INFO - Started process (PID=155315) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:40.474+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:56:40.474+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:40.474+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:40.710+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:40.723+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:40.723+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a796b77f0>
+[2024-07-19T08:56:40.724+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:40.723+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:56:40.732+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:40.732+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:56:40.739+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:40.739+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:02:20+00:00, run_after=2024-07-19 00:02:40+00:00
+[2024-07-19T08:56:40.753+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.283 seconds
+[2024-07-19T08:56:53.714+0530] {processor.py:161} INFO - Started process (PID=155425) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:53.715+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:56:53.716+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:53.716+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:53.975+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:56:53.987+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:53.987+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a796b77f0>
+[2024-07-19T08:56:53.987+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:53.987+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:56:53.994+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:53.994+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:56:54.003+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:56:54.003+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:02:40+00:00, run_after=2024-07-19 00:03:00+00:00
+[2024-07-19T08:56:54.017+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.306 seconds
+[2024-07-19T08:57:05.837+0530] {processor.py:161} INFO - Started process (PID=155526) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:05.837+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:57:05.838+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:05.838+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:06.081+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:06.092+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:06.092+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a796b77f0>
+[2024-07-19T08:57:06.093+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:06.092+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:57:06.099+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:06.099+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:57:06.107+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:06.107+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:03:00+00:00, run_after=2024-07-19 00:03:20+00:00
+[2024-07-19T08:57:06.119+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.285 seconds
+[2024-07-19T08:57:17.968+0530] {processor.py:161} INFO - Started process (PID=155617) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:17.968+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:57:17.969+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:17.969+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:18.197+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:18.209+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:18.208+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a796b77f0>
+[2024-07-19T08:57:18.209+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:18.209+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:57:18.217+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:18.216+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:57:18.225+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:18.225+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:03:20+00:00, run_after=2024-07-19 00:03:40+00:00
+[2024-07-19T08:57:18.237+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.272 seconds
+[2024-07-19T08:57:30.401+0530] {processor.py:161} INFO - Started process (PID=155697) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:30.401+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:57:30.402+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:30.402+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:30.665+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:30.677+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:30.677+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a796b77f0>
+[2024-07-19T08:57:30.677+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:30.677+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:57:30.685+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:30.685+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:57:30.694+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:30.694+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:03:40+00:00, run_after=2024-07-19 00:04:00+00:00
+[2024-07-19T08:57:30.706+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.309 seconds
+[2024-07-19T08:57:42.836+0530] {processor.py:161} INFO - Started process (PID=155776) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:42.836+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:57:42.837+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:42.837+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:43.075+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:43.087+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:43.086+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795b41f0>
+[2024-07-19T08:57:43.087+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:43.087+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:57:43.094+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:43.094+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:57:43.102+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:43.102+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:04:00+00:00, run_after=2024-07-19 00:04:20+00:00
+[2024-07-19T08:57:43.112+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.280 seconds
+[2024-07-19T08:57:54.787+0530] {processor.py:161} INFO - Started process (PID=155852) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:54.788+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:57:54.789+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:54.788+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:55.016+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:57:55.027+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:55.027+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795b41f0>
+[2024-07-19T08:57:55.028+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:55.027+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:57:55.034+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:55.034+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:57:55.043+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:57:55.043+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:04:20+00:00, run_after=2024-07-19 00:04:40+00:00
+[2024-07-19T08:57:55.054+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.269 seconds
+[2024-07-19T08:58:06.670+0530] {processor.py:161} INFO - Started process (PID=155933) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:06.670+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:58:06.671+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:06.671+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:06.907+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:06.918+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:06.918+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795ba680>
+[2024-07-19T08:58:06.919+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:06.918+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:58:06.924+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:06.924+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:58:06.933+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:06.933+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:04:40+00:00, run_after=2024-07-19 00:05:00+00:00
+[2024-07-19T08:58:06.944+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.277 seconds
+[2024-07-19T08:58:18.879+0530] {processor.py:161} INFO - Started process (PID=156009) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:18.880+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:58:18.881+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:18.880+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:19.122+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:19.134+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:19.134+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795be680>
+[2024-07-19T08:58:19.135+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:19.135+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:58:19.141+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:19.141+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:58:19.150+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:19.150+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:05:00+00:00, run_after=2024-07-19 00:05:20+00:00
+[2024-07-19T08:58:19.163+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.287 seconds
+[2024-07-19T08:58:31.333+0530] {processor.py:161} INFO - Started process (PID=156086) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:31.333+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:58:31.334+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:31.334+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:31.571+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:31.588+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:31.587+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795beef0>
+[2024-07-19T08:58:31.589+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:31.588+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:58:31.600+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:31.598+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:58:31.607+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:31.607+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:05:20+00:00, run_after=2024-07-19 00:05:40+00:00
+[2024-07-19T08:58:31.619+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.290 seconds
+[2024-07-19T08:58:43.661+0530] {processor.py:161} INFO - Started process (PID=156164) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:43.662+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:58:43.663+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:43.663+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:43.904+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:43.917+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:43.916+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795beef0>
+[2024-07-19T08:58:43.917+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:43.917+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:58:43.923+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:43.923+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:58:43.932+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:43.932+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:05:40+00:00, run_after=2024-07-19 00:06:00+00:00
+[2024-07-19T08:58:43.946+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.288 seconds
+[2024-07-19T08:58:55.691+0530] {processor.py:161} INFO - Started process (PID=156336) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:55.692+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:58:55.693+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:55.692+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:55.934+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:58:55.947+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:55.946+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795beef0>
+[2024-07-19T08:58:55.947+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:55.947+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:58:55.952+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:55.952+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:58:55.960+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:58:55.960+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:06:00+00:00, run_after=2024-07-19 00:06:20+00:00
+[2024-07-19T08:58:55.970+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.282 seconds
+[2024-07-19T08:59:07.631+0530] {processor.py:161} INFO - Started process (PID=156441) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:07.632+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:59:07.633+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:07.633+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:07.863+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:07.875+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:07.875+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795beef0>
+[2024-07-19T08:59:07.876+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:07.875+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:59:07.881+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:07.881+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:59:07.889+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:07.889+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:06:20+00:00, run_after=2024-07-19 00:06:40+00:00
+[2024-07-19T08:59:07.900+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.272 seconds
+[2024-07-19T08:59:19.843+0530] {processor.py:161} INFO - Started process (PID=156517) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:19.843+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:59:19.844+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:19.844+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:20.083+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:20.096+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:20.096+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795beef0>
+[2024-07-19T08:59:20.097+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:20.097+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:59:20.103+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:20.102+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:59:20.110+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:20.110+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:06:40+00:00, run_after=2024-07-19 00:07:00+00:00
+[2024-07-19T08:59:20.122+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.282 seconds
+[2024-07-19T08:59:31.543+0530] {processor.py:161} INFO - Started process (PID=156594) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:31.544+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:59:31.544+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:31.544+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:31.782+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:31.795+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:31.794+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795beef0>
+[2024-07-19T08:59:31.795+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:31.795+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:59:31.801+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:31.801+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:59:31.809+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:31.809+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:07:00+00:00, run_after=2024-07-19 00:07:20+00:00
+[2024-07-19T08:59:31.822+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.282 seconds
+[2024-07-19T08:59:43.678+0530] {processor.py:161} INFO - Started process (PID=156672) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:43.678+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:59:43.679+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:43.679+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:43.919+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:43.933+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:43.932+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795beef0>
+[2024-07-19T08:59:43.933+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:43.933+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:59:43.939+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:43.939+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:59:43.948+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:43.948+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:07:20+00:00, run_after=2024-07-19 00:07:40+00:00
+[2024-07-19T08:59:44.066+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.392 seconds
+[2024-07-19T08:59:55.639+0530] {processor.py:161} INFO - Started process (PID=156751) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:55.640+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T08:59:55.640+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:55.640+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:55.867+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T08:59:55.879+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:55.879+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795beef0>
+[2024-07-19T08:59:55.880+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:55.879+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T08:59:55.885+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:55.885+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T08:59:55.893+0530] {logging_mixin.py:188} INFO - [2024-07-19T08:59:55.893+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:07:40+00:00, run_after=2024-07-19 00:08:00+00:00
+[2024-07-19T08:59:55.904+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.269 seconds
+[2024-07-19T09:00:07.954+0530] {processor.py:161} INFO - Started process (PID=156844) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:07.955+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:00:07.956+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:07.955+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:08.185+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:08.197+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:08.197+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795beef0>
+[2024-07-19T09:00:08.198+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:08.197+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:00:08.204+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:08.203+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:00:08.213+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:08.213+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:08:00+00:00, run_after=2024-07-19 00:08:20+00:00
+[2024-07-19T09:00:08.225+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.274 seconds
+[2024-07-19T09:00:20.168+0530] {processor.py:161} INFO - Started process (PID=156921) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:20.168+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:00:20.169+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:20.169+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:20.403+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:20.415+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:20.414+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795bb760>
+[2024-07-19T09:00:20.415+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:20.415+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:00:20.421+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:20.420+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:00:20.429+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:20.429+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:08:20+00:00, run_after=2024-07-19 00:08:40+00:00
+[2024-07-19T09:00:20.440+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.275 seconds
+[2024-07-19T09:00:32.529+0530] {processor.py:161} INFO - Started process (PID=156998) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:32.529+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:00:32.530+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:32.530+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:32.779+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:32.791+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:32.790+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795bbc70>
+[2024-07-19T09:00:32.791+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:32.791+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:00:32.797+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:32.797+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:00:32.805+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:32.805+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:08:40+00:00, run_after=2024-07-19 00:09:00+00:00
+[2024-07-19T09:00:32.816+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.291 seconds
+[2024-07-19T09:00:44.673+0530] {processor.py:161} INFO - Started process (PID=157075) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:44.673+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:00:44.674+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:44.674+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:44.917+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:44.929+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:44.929+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795bfc70>
+[2024-07-19T09:00:44.930+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:44.930+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:00:44.935+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:44.935+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:00:44.943+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:44.942+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:09:00+00:00, run_after=2024-07-19 00:09:20+00:00
+[2024-07-19T09:00:44.954+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.284 seconds
+[2024-07-19T09:00:56.547+0530] {processor.py:161} INFO - Started process (PID=157211) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:56.547+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:00:56.548+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:56.548+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:56.792+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:00:56.813+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:56.813+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795bfc70>
+[2024-07-19T09:00:56.814+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:56.813+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:00:56.822+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:56.821+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:00:56.833+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:00:56.833+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:09:20+00:00, run_after=2024-07-19 00:09:40+00:00
+[2024-07-19T09:00:56.847+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.303 seconds
+[2024-07-19T09:01:08.448+0530] {processor.py:161} INFO - Started process (PID=157318) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:08.449+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:01:08.450+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:08.450+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:08.700+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:08.715+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:08.714+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d40d0>
+[2024-07-19T09:01:08.715+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:08.715+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:01:08.721+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:08.720+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:01:08.730+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:08.730+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:09:40+00:00, run_after=2024-07-19 00:10:00+00:00
+[2024-07-19T09:01:08.744+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.299 seconds
+[2024-07-19T09:01:20.479+0530] {processor.py:161} INFO - Started process (PID=157393) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:20.479+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:01:20.480+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:20.480+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:20.721+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:20.735+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:20.735+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d40d0>
+[2024-07-19T09:01:20.735+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:20.735+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:01:20.741+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:20.741+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:01:20.749+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:20.748+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:10:00+00:00, run_after=2024-07-19 00:10:20+00:00
+[2024-07-19T09:01:20.760+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.286 seconds
+[2024-07-19T09:01:32.256+0530] {processor.py:161} INFO - Started process (PID=157471) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:32.257+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:01:32.258+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:32.257+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:32.483+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:32.495+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:32.495+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:01:32.496+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:32.495+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:01:32.501+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:32.501+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:01:32.509+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:32.509+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:10:20+00:00, run_after=2024-07-19 00:10:40+00:00
+[2024-07-19T09:01:32.520+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.267 seconds
+[2024-07-19T09:01:44.421+0530] {processor.py:161} INFO - Started process (PID=157547) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:44.421+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:01:44.422+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:44.422+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:44.665+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:44.678+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:44.677+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:01:44.678+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:44.678+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:01:44.683+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:44.683+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:01:44.691+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:44.691+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:10:40+00:00, run_after=2024-07-19 00:11:00+00:00
+[2024-07-19T09:01:44.705+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.287 seconds
+[2024-07-19T09:01:56.473+0530] {processor.py:161} INFO - Started process (PID=157625) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:56.473+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:01:56.474+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:56.474+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:56.715+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:01:56.727+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:56.727+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:01:56.728+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:56.727+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:01:56.734+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:56.733+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:01:56.744+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:01:56.744+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:11:00+00:00, run_after=2024-07-19 00:11:20+00:00
+[2024-07-19T09:01:56.848+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.378 seconds
+[2024-07-19T09:02:08.192+0530] {processor.py:161} INFO - Started process (PID=157709) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:08.192+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:02:08.193+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:08.193+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:08.445+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:08.458+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:08.457+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:02:08.458+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:08.458+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:02:08.463+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:08.463+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:02:08.472+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:08.472+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:11:20+00:00, run_after=2024-07-19 00:11:40+00:00
+[2024-07-19T09:02:08.573+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.384 seconds
+[2024-07-19T09:02:20.066+0530] {processor.py:161} INFO - Started process (PID=157808) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:20.066+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:02:20.067+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:20.067+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:20.295+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:20.307+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:20.307+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:02:20.308+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:20.307+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:02:20.313+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:20.313+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:02:20.403+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:20.402+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:11:40+00:00, run_after=2024-07-19 00:12:00+00:00
+[2024-07-19T09:02:20.413+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.351 seconds
+[2024-07-19T09:02:32.323+0530] {processor.py:161} INFO - Started process (PID=157885) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:32.323+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:02:32.324+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:32.324+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:32.551+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:32.563+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:32.562+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:02:32.563+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:32.563+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:02:32.568+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:32.568+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:02:32.577+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:32.577+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:12:00+00:00, run_after=2024-07-19 00:12:20+00:00
+[2024-07-19T09:02:32.591+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.271 seconds
+[2024-07-19T09:02:44.838+0530] {processor.py:161} INFO - Started process (PID=157964) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:44.839+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:02:44.840+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:44.840+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:45.063+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:45.075+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:45.075+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:02:45.076+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:45.075+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:02:45.082+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:45.081+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:02:45.090+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:45.089+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:12:20+00:00, run_after=2024-07-19 00:12:40+00:00
+[2024-07-19T09:02:45.105+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.269 seconds
+[2024-07-19T09:02:57.003+0530] {processor.py:161} INFO - Started process (PID=158041) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:57.004+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:02:57.005+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:57.005+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:57.237+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:02:57.249+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:57.249+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:02:57.250+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:57.249+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:02:57.255+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:57.255+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:02:57.263+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:02:57.263+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:12:40+00:00, run_after=2024-07-19 00:13:00+00:00
+[2024-07-19T09:02:57.274+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.274 seconds
+[2024-07-19T09:03:08.918+0530] {processor.py:161} INFO - Started process (PID=158119) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:08.918+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:03:08.920+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:08.919+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:09.148+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:09.160+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:09.160+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:03:09.161+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:09.160+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:03:09.166+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:09.166+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:03:09.173+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:09.173+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:13:00+00:00, run_after=2024-07-19 00:13:20+00:00
+[2024-07-19T09:03:09.185+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.272 seconds
+[2024-07-19T09:03:20.953+0530] {processor.py:161} INFO - Started process (PID=158196) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:20.953+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:03:20.954+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:20.954+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:21.181+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:21.194+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:21.194+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:03:21.194+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:21.194+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:03:21.200+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:21.199+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:03:21.207+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:21.207+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:13:20+00:00, run_after=2024-07-19 00:13:40+00:00
+[2024-07-19T09:03:21.218+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.268 seconds
+[2024-07-19T09:03:33.034+0530] {processor.py:161} INFO - Started process (PID=158273) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:33.035+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:03:33.036+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:33.036+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:33.263+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:33.275+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:33.274+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:03:33.275+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:33.275+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:03:33.281+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:33.280+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:03:33.288+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:33.288+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:13:40+00:00, run_after=2024-07-19 00:14:00+00:00
+[2024-07-19T09:03:33.299+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.268 seconds
+[2024-07-19T09:03:45.608+0530] {processor.py:161} INFO - Started process (PID=158352) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:45.609+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:03:45.610+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:45.610+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:45.855+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:45.868+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:45.868+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:03:45.869+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:45.868+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:03:45.875+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:45.874+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:03:45.883+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:45.883+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:14:00+00:00, run_after=2024-07-19 00:14:20+00:00
+[2024-07-19T09:03:45.895+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.293 seconds
+[2024-07-19T09:03:58.173+0530] {processor.py:161} INFO - Started process (PID=158432) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:58.173+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:03:58.174+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:58.174+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:58.383+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:03:58.396+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:58.396+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:03:58.396+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:58.396+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:03:58.402+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:58.401+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:03:58.409+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:03:58.409+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:14:20+00:00, run_after=2024-07-19 00:14:40+00:00
+[2024-07-19T09:03:58.421+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.251 seconds
+[2024-07-19T09:04:10.069+0530] {processor.py:161} INFO - Started process (PID=158512) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:10.069+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:04:10.070+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:10.070+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:10.328+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:10.340+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:10.339+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:04:10.340+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:10.340+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:04:10.346+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:10.346+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:04:10.354+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:10.354+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:14:40+00:00, run_after=2024-07-19 00:15:00+00:00
+[2024-07-19T09:04:10.464+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.398 seconds
+[2024-07-19T09:04:22.106+0530] {processor.py:161} INFO - Started process (PID=158630) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:22.107+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:04:22.108+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:22.108+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:22.344+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:22.356+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:22.356+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:04:22.356+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:22.356+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:04:22.362+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:22.361+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:04:22.370+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:22.370+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:15:00+00:00, run_after=2024-07-19 00:15:20+00:00
+[2024-07-19T09:04:22.463+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.360 seconds
+[2024-07-19T09:04:34.250+0530] {processor.py:161} INFO - Started process (PID=158709) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:34.251+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:04:34.251+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:34.251+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:34.488+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:34.502+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:34.501+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:04:34.502+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:34.502+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:04:34.508+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:34.508+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:04:34.607+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:34.607+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:15:20+00:00, run_after=2024-07-19 00:15:40+00:00
+[2024-07-19T09:04:34.618+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.371 seconds
+[2024-07-19T09:04:46.467+0530] {processor.py:161} INFO - Started process (PID=158785) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:46.468+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:04:46.469+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:46.469+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:46.712+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:46.725+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:46.724+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:04:46.725+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:46.725+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:04:46.731+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:46.730+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:04:46.825+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:46.824+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:15:40+00:00, run_after=2024-07-19 00:16:00+00:00
+[2024-07-19T09:04:46.834+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.370 seconds
+[2024-07-19T09:04:58.449+0530] {processor.py:161} INFO - Started process (PID=158863) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:58.450+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:04:58.451+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:58.451+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:58.690+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:04:58.702+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:58.702+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:04:58.703+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:58.702+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:04:58.709+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:58.708+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:04:58.717+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:04:58.717+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:16:00+00:00, run_after=2024-07-19 00:16:20+00:00
+[2024-07-19T09:04:58.730+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.284 seconds
+[2024-07-19T09:05:10.524+0530] {processor.py:161} INFO - Started process (PID=158945) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:10.524+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:05:10.525+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:10.525+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:10.756+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:10.769+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:10.769+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d80d0>
+[2024-07-19T09:05:10.769+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:10.769+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:05:10.775+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:10.774+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:05:10.782+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:10.782+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:16:20+00:00, run_after=2024-07-19 00:16:40+00:00
+[2024-07-19T09:05:10.793+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.272 seconds
+[2024-07-19T09:05:22.884+0530] {processor.py:161} INFO - Started process (PID=159032) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:22.884+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:05:22.885+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:22.885+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:23.088+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:23.101+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:23.101+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d44c0>
+[2024-07-19T09:05:23.101+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:23.101+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:05:23.107+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:23.106+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:05:23.114+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:23.114+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:16:40+00:00, run_after=2024-07-19 00:17:00+00:00
+[2024-07-19T09:05:23.125+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.244 seconds
+[2024-07-19T09:05:35.112+0530] {processor.py:161} INFO - Started process (PID=159111) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:35.112+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:05:35.113+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:35.113+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:35.356+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:35.369+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:35.369+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d4430>
+[2024-07-19T09:05:35.370+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:35.369+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:05:35.375+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:35.375+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:05:35.383+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:35.382+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:17:00+00:00, run_after=2024-07-19 00:17:20+00:00
+[2024-07-19T09:05:35.395+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.286 seconds
+[2024-07-19T09:05:47.385+0530] {processor.py:161} INFO - Started process (PID=159311) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:47.385+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:05:47.386+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:47.386+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:47.630+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:05:47.642+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:47.642+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x773a795d4430>
+[2024-07-19T09:05:47.643+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:47.642+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:05:47.648+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:47.648+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:05:47.656+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:05:47.655+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:17:20+00:00, run_after=2024-07-19 00:17:40+00:00
+[2024-07-19T09:05:47.669+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.287 seconds
+[2024-07-19T09:06:23.045+0530] {processor.py:161} INFO - Started process (PID=159942) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:23.046+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:06:23.047+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:23.047+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:23.260+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:23.273+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:23.273+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:06:23.286+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:23.286+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:17:20+00:00, run_after=2024-07-19 00:17:40+00:00
+[2024-07-19T09:06:23.298+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.256 seconds
+[2024-07-19T09:06:37.833+0530] {processor.py:161} INFO - Started process (PID=159982) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:37.834+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:06:37.835+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:37.835+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:38.076+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:38.087+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:38.087+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7fddb7e39240>
+[2024-07-19T09:06:38.088+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:38.087+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:06:38.096+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:38.096+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:06:38.103+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:38.103+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:17:40+00:00, run_after=2024-07-19 00:18:00+00:00
+[2024-07-19T09:06:38.114+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.284 seconds
+[2024-07-19T09:06:56.480+0530] {processor.py:161} INFO - Started process (PID=160092) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:56.481+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:06:56.482+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:56.482+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:56.721+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:56.734+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:56.734+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7fddb7e39240>
+[2024-07-19T09:06:56.735+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:56.735+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:06:56.742+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:56.742+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:06:56.750+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:56.750+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:18:00+00:00, run_after=2024-07-19 00:18:20+00:00
+[2024-07-19T09:06:56.762+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.288 seconds
+[2024-07-19T09:06:56.781+0530] {processor.py:161} INFO - Started process (PID=160106) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:56.782+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:06:56.783+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:56.782+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:57.025+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:06:57.038+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:57.038+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7fddb7e39240>
+[2024-07-19T09:06:57.039+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:57.038+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:06:57.046+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:57.046+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:06:57.053+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:06:57.053+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:18:00+00:00, run_after=2024-07-19 00:18:20+00:00
+[2024-07-19T09:06:57.065+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.287 seconds
+[2024-07-19T09:08:01.116+0530] {processor.py:161} INFO - Started process (PID=160857) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:08:01.118+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:08:01.119+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:08:01.119+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:08:01.323+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:08:01.331+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:08:01.331+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:08:01.339+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:08:01.339+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:18:40+00:00, run_after=2024-07-19 00:19:00+00:00
+[2024-07-19T09:08:01.351+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.237 seconds
+[2024-07-19T09:08:01.490+0530] {processor.py:161} INFO - Started process (PID=160870) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:08:01.491+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:08:01.492+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:08:01.491+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:08:01.729+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:08:01.741+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:08:01.741+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24adbed2d0>
+[2024-07-19T09:08:01.742+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:08:01.741+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:08:01.748+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:08:01.748+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:08:01.757+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:08:01.756+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:19:00+00:00, run_after=2024-07-19 00:19:20+00:00
+[2024-07-19T09:08:01.767+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.280 seconds
+[2024-07-19T09:09:20.343+0530] {processor.py:161} INFO - Started process (PID=161271) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:20.344+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:09:20.346+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:20.345+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:20.594+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:20.607+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:20.606+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada3ba30>
+[2024-07-19T09:09:20.607+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:20.607+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:09:20.616+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:20.616+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:09:20.626+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:20.626+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:19:20+00:00, run_after=2024-07-19 00:19:40+00:00
+[2024-07-19T09:09:20.641+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.302 seconds
+[2024-07-19T09:09:20.749+0530] {processor.py:161} INFO - Started process (PID=161287) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:20.749+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:09:20.751+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:20.751+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:21.074+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:21.097+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:21.096+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada3ba30>
+[2024-07-19T09:09:21.098+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:21.097+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:09:21.115+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:21.114+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:09:21.127+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:21.127+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:19:20+00:00, run_after=2024-07-19 00:19:40+00:00
+[2024-07-19T09:09:21.141+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.395 seconds
+[2024-07-19T09:09:21.166+0530] {processor.py:161} INFO - Started process (PID=161301) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:21.167+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:09:21.169+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:21.169+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:21.422+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:21.436+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:21.436+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada3ba30>
+[2024-07-19T09:09:21.437+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:21.436+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:09:21.445+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:21.444+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:09:21.453+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:21.453+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:19:20+00:00, run_after=2024-07-19 00:19:40+00:00
+[2024-07-19T09:09:21.465+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.303 seconds
+[2024-07-19T09:09:43.037+0530] {processor.py:161} INFO - Started process (PID=161425) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:43.037+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:09:43.038+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:43.038+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:43.305+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:09:43.320+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:43.320+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada3ba30>
+[2024-07-19T09:09:43.321+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:43.321+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:09:43.329+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:43.329+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:09:43.337+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:09:43.337+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:19:40+00:00, run_after=2024-07-19 00:20:00+00:00
+[2024-07-19T09:09:43.353+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.319 seconds
+[2024-07-19T09:10:06.729+0530] {processor.py:161} INFO - Started process (PID=162061) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:10:06.730+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:10:06.730+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:06.730+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:10:06.964+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:10:06.977+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:06.976+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada43be0>
+[2024-07-19T09:10:06.977+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:06.977+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:10:06.984+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:06.984+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:10:06.992+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:06.992+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:20:00+00:00, run_after=2024-07-19 00:20:20+00:00
+[2024-07-19T09:10:07.006+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.280 seconds
+[2024-07-19T09:10:29.662+0530] {processor.py:161} INFO - Started process (PID=162669) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:10:29.663+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:10:29.665+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:29.664+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:10:30.059+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:10:30.082+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:30.081+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada3bbe0>
+[2024-07-19T09:10:30.083+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:30.082+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:10:30.097+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:30.097+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:10:30.113+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:30.112+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:20:20+00:00, run_after=2024-07-19 00:20:40+00:00
+[2024-07-19T09:10:30.130+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.473 seconds
+[2024-07-19T09:10:52.186+0530] {processor.py:161} INFO - Started process (PID=162873) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:10:52.187+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:10:52.188+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:52.187+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:10:52.438+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:10:52.451+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:52.451+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada3bbe0>
+[2024-07-19T09:10:52.451+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:52.451+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:10:52.458+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:52.458+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:10:52.466+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:10:52.466+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:20:40+00:00, run_after=2024-07-19 00:21:00+00:00
+[2024-07-19T09:10:52.477+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.294 seconds
+[2024-07-19T09:11:15.021+0530] {processor.py:161} INFO - Started process (PID=162963) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:11:15.022+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:11:15.023+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:15.022+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:11:15.339+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:11:15.354+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:15.354+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada55000>
+[2024-07-19T09:11:15.355+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:15.355+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:11:15.365+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:15.365+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:11:15.379+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:15.379+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:21:00+00:00, run_after=2024-07-19 00:21:20+00:00
+[2024-07-19T09:11:15.395+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.378 seconds
+[2024-07-19T09:11:36.912+0530] {processor.py:161} INFO - Started process (PID=163043) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:11:36.912+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:11:36.914+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:36.913+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:11:37.178+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:11:37.197+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:37.196+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada51000>
+[2024-07-19T09:11:37.198+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:37.197+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:11:37.205+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:37.205+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:11:37.214+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:37.214+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:21:20+00:00, run_after=2024-07-19 00:21:40+00:00
+[2024-07-19T09:11:37.227+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.319 seconds
+[2024-07-19T09:11:56.936+0530] {processor.py:161} INFO - Started process (PID=163145) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:11:56.936+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:11:56.937+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:56.937+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:11:57.185+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:11:57.197+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:57.197+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada4d000>
+[2024-07-19T09:11:57.198+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:57.197+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:11:57.206+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:57.206+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:11:57.215+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:11:57.215+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:21:40+00:00, run_after=2024-07-19 00:22:00+00:00
+[2024-07-19T09:11:57.227+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.294 seconds
+[2024-07-19T09:12:07.767+0530] {processor.py:161} INFO - Started process (PID=163213) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:07.768+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:12:07.769+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:07.769+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:08.030+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:08.043+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:08.043+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada4d000>
+[2024-07-19T09:12:08.044+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:08.044+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:12:08.052+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:08.051+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:12:08.061+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:08.061+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:22:00+00:00, run_after=2024-07-19 00:22:20+00:00
+[2024-07-19T09:12:08.074+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.311 seconds
+[2024-07-19T09:12:26.799+0530] {processor.py:161} INFO - Started process (PID=163312) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:26.799+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:12:26.800+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:26.800+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:27.047+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:27.060+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:27.060+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada55240>
+[2024-07-19T09:12:27.061+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:27.060+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:12:27.069+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:27.068+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:12:27.078+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:27.077+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:22:40+00:00, run_after=2024-07-19 00:23:00+00:00
+[2024-07-19T09:12:27.089+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.294 seconds
+[2024-07-19T09:12:38.048+0530] {processor.py:161} INFO - Started process (PID=163393) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:38.048+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:12:38.049+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:38.049+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:38.305+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:38.318+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:38.317+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada51240>
+[2024-07-19T09:12:38.318+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:38.318+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:12:38.327+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:38.327+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:12:38.335+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:38.335+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:23:00+00:00, run_after=2024-07-19 00:23:20+00:00
+[2024-07-19T09:12:38.347+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.303 seconds
+[2024-07-19T09:12:49.276+0530] {processor.py:161} INFO - Started process (PID=163478) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:49.276+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:12:49.277+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:49.277+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:49.499+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:12:49.512+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:49.512+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada55240>
+[2024-07-19T09:12:49.513+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:49.512+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:12:49.522+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:49.522+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:12:49.530+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:12:49.530+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:23:20+00:00, run_after=2024-07-19 00:23:40+00:00
+[2024-07-19T09:12:49.543+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.271 seconds
+[2024-07-19T09:13:00.741+0530] {processor.py:161} INFO - Started process (PID=163542) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:00.742+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:13:00.743+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:00.742+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:00.985+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:00.999+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:00.998+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada51240>
+[2024-07-19T09:13:00.999+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:00.999+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:13:01.008+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:01.008+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:13:01.016+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:01.016+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:23:40+00:00, run_after=2024-07-19 00:24:00+00:00
+[2024-07-19T09:13:01.030+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.292 seconds
+[2024-07-19T09:13:12.483+0530] {processor.py:161} INFO - Started process (PID=163646) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:12.484+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:13:12.485+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:12.485+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:12.743+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:12.757+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:12.757+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24adac5990>
+[2024-07-19T09:13:12.757+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:12.757+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:13:12.766+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:12.766+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:13:12.774+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:12.774+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:24:00+00:00, run_after=2024-07-19 00:24:20+00:00
+[2024-07-19T09:13:12.786+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.306 seconds
+[2024-07-19T09:13:23.627+0530] {processor.py:161} INFO - Started process (PID=163707) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:23.628+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:13:23.629+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:23.628+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:23.860+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:23.873+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:23.872+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24adaba8c0>
+[2024-07-19T09:13:23.873+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:23.873+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:13:23.880+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:23.880+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:13:23.888+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:23.888+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:24:20+00:00, run_after=2024-07-19 00:24:40+00:00
+[2024-07-19T09:13:23.900+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.276 seconds
+[2024-07-19T09:13:34.778+0530] {processor.py:161} INFO - Started process (PID=163776) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:34.779+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:13:34.780+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:34.779+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:35.033+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:13:35.046+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:35.045+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24adaba8c0>
+[2024-07-19T09:13:35.046+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:35.046+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:13:35.053+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:35.053+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:13:35.061+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:13:35.061+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:24:40+00:00, run_after=2024-07-19 00:25:00+00:00
+[2024-07-19T09:13:35.073+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.298 seconds
+[2024-07-19T09:15:16.415+0530] {processor.py:161} INFO - Started process (PID=164196) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:15:16.416+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:15:16.418+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:16.417+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:15:16.687+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:15:16.702+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:16.702+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ada6bf40>
+[2024-07-19T09:15:16.702+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:16.702+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:15:16.710+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:16.709+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:15:16.721+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:16.720+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:26:40+00:00, run_after=2024-07-19 00:27:00+00:00
+[2024-07-19T09:15:16.736+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.325 seconds
+[2024-07-19T09:15:51.089+0530] {processor.py:161} INFO - Started process (PID=164337) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:15:51.092+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:15:51.094+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:51.093+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:15:51.323+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:15:51.329+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:51.329+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:15:51.339+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:51.339+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:26:40+00:00, run_after=2024-07-19 00:27:00+00:00
+[2024-07-19T09:15:51.350+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.267 seconds
+[2024-07-19T09:15:56.259+0530] {processor.py:161} INFO - Started process (PID=164359) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:15:56.260+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:15:56.261+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:56.261+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:15:56.456+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_sec' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:15:56.471+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:56.471+0530] {dag.py:1541} INFO - Executing dag callback function: <function <lambda> at 0x7e24ad9881f0>
+[2024-07-19T09:15:56.471+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:56.471+0530] {dag.py:1545} ERROR - failed to invoke dag state update callback
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 1543, in execute_callback
+    callback(context)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 114, in <lambda>
+    on_failure_callback=lambda context: notify_email(context),  # Set the failure callback here
+NameError: name 'notify_email' is not defined
+[2024-07-19T09:15:56.476+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:56.476+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:15:56.483+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:15:56.483+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_sec to 2024-07-19 00:26:40+00:00, run_after=2024-07-19 00:27:00+00:00
+[2024-07-19T09:15:56.494+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.239 seconds
+[2024-07-19T09:16:16.194+0530] {processor.py:161} INFO - Started process (PID=164418) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:16:16.196+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:16:16.197+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:16:16.197+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:16:16.442+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:16:16.490+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:16:16.490+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:16:16.494+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:16:16.494+0530] {dag.py:3111} INFO - Creating ORM DAG for upload_a_batch_every_20_seconds
+[2024-07-19T09:16:16.500+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:16:16.500+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:16:16.516+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.325 seconds
+[2024-07-19T09:16:48.332+0530] {processor.py:161} INFO - Started process (PID=164540) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:16:48.335+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:16:48.336+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:16:48.335+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:16:48.610+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:16:48.618+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:16:48.618+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:16:48.628+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:16:48.628+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:16:48.639+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.310 seconds
+[2024-07-19T09:17:21.638+0530] {processor.py:161} INFO - Started process (PID=165233) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:17:21.641+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:17:21.643+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:17:21.642+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:17:21.835+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:17:21.841+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:17:21.841+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:17:21.849+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:17:21.849+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:17:21.861+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.229 seconds
+[2024-07-19T09:17:55.842+0530] {processor.py:161} INFO - Started process (PID=165358) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:17:55.844+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:17:55.845+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:17:55.845+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:17:56.033+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:17:56.039+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:17:56.039+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:17:56.047+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:17:56.047+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:17:56.058+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.220 seconds
+[2024-07-19T09:18:31.985+0530] {processor.py:161} INFO - Started process (PID=166190) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:18:31.988+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:18:31.989+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:18:31.989+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:18:32.191+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:18:32.198+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:18:32.198+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:18:32.207+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:18:32.207+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:18:32.218+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.237 seconds
+[2024-07-19T09:19:09.162+0530] {processor.py:161} INFO - Started process (PID=166412) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:19:09.164+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:19:09.166+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:19:09.165+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:19:09.351+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:19:09.357+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:19:09.357+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:19:09.366+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:19:09.365+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:19:09.449+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.290 seconds
+[2024-07-19T09:19:53.899+0530] {processor.py:161} INFO - Started process (PID=166595) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:19:53.902+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:19:53.904+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:19:53.903+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:19:54.111+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:19:54.118+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:19:54.117+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:19:54.126+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:19:54.126+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:19:54.138+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.242 seconds
+[2024-07-19T09:20:38.179+0530] {processor.py:161} INFO - Started process (PID=166939) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:20:38.179+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:20:38.180+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:20:38.180+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:20:38.369+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:20:38.376+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:20:38.375+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:20:38.384+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:20:38.384+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:20:38.394+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.219 seconds
+[2024-07-19T09:21:23.505+0530] {processor.py:161} INFO - Started process (PID=167206) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:21:23.508+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:21:23.510+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:23.510+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:21:23.698+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:21:23.705+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:23.704+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:21:23.713+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:23.713+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:21:23.724+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.224 seconds
