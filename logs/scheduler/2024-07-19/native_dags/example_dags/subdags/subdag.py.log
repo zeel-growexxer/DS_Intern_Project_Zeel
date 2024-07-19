@@ -43,3 +43,23 @@
 [2024-07-19T09:21:17.454+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:17.454+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
 [2024-07-19T09:21:17.456+0530] {processor.py:842} WARNING - No viable dags retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
 [2024-07-19T09:21:17.461+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py took 0.015 seconds
+[2024-07-19T09:22:10.783+0530] {processor.py:161} INFO - Started process (PID=167556) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:22:10.784+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2024-07-19T09:22:10.786+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:10.785+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:22:10.787+0530] {processor.py:842} WARNING - No viable dags retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:22:10.792+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py took 0.012 seconds
+[2024-07-19T09:23:02.257+0530] {processor.py:161} INFO - Started process (PID=167898) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:23:02.260+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2024-07-19T09:23:02.262+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:02.262+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:23:02.265+0530] {processor.py:842} WARNING - No viable dags retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:23:02.274+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py took 0.022 seconds
+[2024-07-19T09:23:47.554+0530] {processor.py:161} INFO - Started process (PID=168130) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:23:47.556+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2024-07-19T09:23:47.557+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:47.557+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:23:47.559+0530] {processor.py:842} WARNING - No viable dags retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:23:47.567+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py took 0.016 seconds
+[2024-07-19T09:24:32.963+0530] {processor.py:161} INFO - Started process (PID=168333) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:24:32.965+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2024-07-19T09:24:32.966+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:32.965+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:24:32.967+0530] {processor.py:842} WARNING - No viable dags retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2024-07-19T09:24:32.972+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py took 0.013 seconds

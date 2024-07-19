@@ -1185,3 +1185,38 @@ NameError: name 'notify_email' is not defined
 [2024-07-19T09:21:23.705+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:23.704+0530] {dag.py:3089} INFO - Sync 1 DAGs
 [2024-07-19T09:21:23.713+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:23.713+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
 [2024-07-19T09:21:23.724+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.224 seconds
+[2024-07-19T09:21:58.799+0530] {processor.py:161} INFO - Started process (PID=167492) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:21:58.800+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:21:58.801+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:58.801+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:21:58.988+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:21:58.994+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:58.994+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:21:59.080+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:59.080+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:21:59.092+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.297 seconds
+[2024-07-19T09:22:35.695+0530] {processor.py:161} INFO - Started process (PID=167678) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:22:35.698+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:22:35.700+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:35.699+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:22:35.902+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:22:35.908+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:35.908+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:22:35.916+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:35.916+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:22:35.927+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.236 seconds
+[2024-07-19T09:23:08.314+0530] {processor.py:161} INFO - Started process (PID=167959) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:23:08.316+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:23:08.317+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:08.317+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:23:08.520+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:23:08.526+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:08.526+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:23:08.614+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:08.614+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:23:08.625+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.314 seconds
+[2024-07-19T09:23:52.602+0530] {processor.py:161} INFO - Started process (PID=168151) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:23:52.604+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:23:52.606+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:52.606+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:23:52.803+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:23:52.810+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:52.809+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:23:52.894+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:52.894+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:23:52.904+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.307 seconds
+[2024-07-19T09:24:23.824+0530] {processor.py:161} INFO - Started process (PID=168265) to work on /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:24:23.827+0530] {processor.py:830} INFO - Processing file /home/growlt245/airflow/dags/car_insurance_policy_dag.py for tasks to queue
+[2024-07-19T09:24:23.830+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:23.829+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:24:24.018+0530] {processor.py:840} INFO - DAG(s) 'upload_a_batch_every_20_seconds' retrieved from /home/growlt245/airflow/dags/car_insurance_policy_dag.py
+[2024-07-19T09:24:24.024+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:24.024+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:24:24.032+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:24.032+0530] {dag.py:3947} INFO - Setting next_dagrun for upload_a_batch_every_20_seconds to 2024-07-19 00:00:00+00:00, run_after=2024-07-19 00:00:20+00:00
+[2024-07-19T09:24:24.043+0530] {processor.py:183} INFO - Processing /home/growlt245/airflow/dags/car_insurance_policy_dag.py took 0.225 seconds

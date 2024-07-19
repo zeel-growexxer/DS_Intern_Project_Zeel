@@ -61,3 +61,31 @@
 [2024-07-19T09:21:02.462+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:02.462+0530] {dag.py:3089} INFO - Sync 1 DAGs
 [2024-07-19T09:21:02.468+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:02.468+0530] {dag.py:3947} INFO - Setting next_dagrun for tutorial_taskflow_api_virtualenv to None, run_after=None
 [2024-07-19T09:21:02.479+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py took 0.039 seconds
+[2024-07-19T09:21:54.734+0530] {processor.py:161} INFO - Started process (PID=167462) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:21:54.737+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py for tasks to queue
+[2024-07-19T09:21:54.738+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:54.738+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:21:54.744+0530] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api_virtualenv' retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:21:54.752+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:54.752+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:21:54.757+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:54.757+0530] {dag.py:3947} INFO - Setting next_dagrun for tutorial_taskflow_api_virtualenv to None, run_after=None
+[2024-07-19T09:21:54.766+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py took 0.038 seconds
+[2024-07-19T09:22:48.686+0530] {processor.py:161} INFO - Started process (PID=167868) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:22:48.689+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py for tasks to queue
+[2024-07-19T09:22:48.690+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:48.690+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:22:48.698+0530] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api_virtualenv' retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:22:48.707+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:48.707+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:22:48.712+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:48.712+0530] {dag.py:3947} INFO - Setting next_dagrun for tutorial_taskflow_api_virtualenv to None, run_after=None
+[2024-07-19T09:22:48.721+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py took 0.039 seconds
+[2024-07-19T09:23:32.748+0530] {processor.py:161} INFO - Started process (PID=168097) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:23:32.751+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py for tasks to queue
+[2024-07-19T09:23:32.752+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:32.752+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:23:32.759+0530] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api_virtualenv' retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:23:32.767+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:32.767+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:23:32.772+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:32.772+0530] {dag.py:3947} INFO - Setting next_dagrun for tutorial_taskflow_api_virtualenv to None, run_after=None
+[2024-07-19T09:23:32.781+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py took 0.038 seconds
+[2024-07-19T09:24:19.225+0530] {processor.py:161} INFO - Started process (PID=168240) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:24:19.225+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py for tasks to queue
+[2024-07-19T09:24:19.227+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:19.226+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:24:19.237+0530] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api_virtualenv' retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2024-07-19T09:24:19.248+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:19.247+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:24:19.254+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:19.254+0530] {dag.py:3947} INFO - Setting next_dagrun for tutorial_taskflow_api_virtualenv to None, run_after=None
+[2024-07-19T09:24:19.266+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py took 0.045 seconds

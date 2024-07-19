@@ -10,7 +10,7 @@ from time import sleep
 from airflow.operators.email import EmailOperator
 
 # Define the path to the local CSV file
-LOCAL_CSV_FILE = '/home/growlt245/airflow/Amended_Insurance_Product_purchase_dataset.csv'
+LOCAL_CSV_FILE = '/home/growlt245/airflow/Amended_Insurance_Product_Purchase_dataset.csv'
 BATCH_SIZE = 10000
 S3_BUCKET_NAME = 'car-insurance-policy-bucket'
 OUTPUT_FOLDER = 'car_insurance_raw_data'

@@ -61,3 +61,31 @@
 [2024-07-19T09:21:13.456+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:13.456+0530] {dag.py:3089} INFO - Sync 1 DAGs
 [2024-07-19T09:21:13.465+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:21:13.465+0530] {dag.py:3947} INFO - Setting next_dagrun for latest_only_with_trigger to 2024-07-18 20:00:00+00:00, run_after=2024-07-19 00:00:00+00:00
 [2024-07-19T09:21:13.475+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py took 0.042 seconds
+[2024-07-19T09:22:06.792+0530] {processor.py:161} INFO - Started process (PID=167540) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:22:06.795+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py for tasks to queue
+[2024-07-19T09:22:06.797+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:06.796+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:22:06.802+0530] {processor.py:840} INFO - DAG(s) 'latest_only_with_trigger' retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:22:06.812+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:06.811+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:22:06.820+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:06.820+0530] {dag.py:3947} INFO - Setting next_dagrun for latest_only_with_trigger to 2024-07-18 20:00:00+00:00, run_after=2024-07-19 00:00:00+00:00
+[2024-07-19T09:22:06.829+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py took 0.043 seconds
+[2024-07-19T09:22:58.977+0530] {processor.py:161} INFO - Started process (PID=167891) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:22:58.980+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py for tasks to queue
+[2024-07-19T09:22:58.981+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:58.981+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:22:58.984+0530] {processor.py:840} INFO - DAG(s) 'latest_only_with_trigger' retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:22:58.992+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:58.992+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:22:59.000+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:22:59.000+0530] {dag.py:3947} INFO - Setting next_dagrun for latest_only_with_trigger to 2024-07-18 20:00:00+00:00, run_after=2024-07-19 00:00:00+00:00
+[2024-07-19T09:22:59.010+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py took 0.036 seconds
+[2024-07-19T09:23:43.547+0530] {processor.py:161} INFO - Started process (PID=168124) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:23:43.549+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py for tasks to queue
+[2024-07-19T09:23:43.550+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:43.550+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:23:43.554+0530] {processor.py:840} INFO - DAG(s) 'latest_only_with_trigger' retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:23:43.562+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:43.562+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:23:43.570+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:23:43.570+0530] {dag.py:3947} INFO - Setting next_dagrun for latest_only_with_trigger to 2024-07-18 20:00:00+00:00, run_after=2024-07-19 00:00:00+00:00
+[2024-07-19T09:23:43.580+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py took 0.037 seconds
+[2024-07-19T09:24:30.276+0530] {processor.py:161} INFO - Started process (PID=168301) to work on /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:24:30.279+0530] {processor.py:830} INFO - Processing file /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py for tasks to queue
+[2024-07-19T09:24:30.281+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:30.280+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:24:30.287+0530] {processor.py:840} INFO - DAG(s) 'latest_only_with_trigger' retrieved from /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-07-19T09:24:30.297+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:30.297+0530] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-19T09:24:30.305+0530] {logging_mixin.py:188} INFO - [2024-07-19T09:24:30.305+0530] {dag.py:3947} INFO - Setting next_dagrun for latest_only_with_trigger to 2024-07-18 20:00:00+00:00, run_after=2024-07-19 00:00:00+00:00
+[2024-07-19T09:24:30.314+0530] {processor.py:183} INFO - Processing /home/growlt245/.local/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py took 0.041 seconds
