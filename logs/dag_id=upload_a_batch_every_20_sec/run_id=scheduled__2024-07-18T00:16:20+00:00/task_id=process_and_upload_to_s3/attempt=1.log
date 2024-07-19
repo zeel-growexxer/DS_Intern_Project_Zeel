@@ -1,0 +1,44 @@
+[2024-07-18T15:21:38.388+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-18T15:21:38.392+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: upload_a_batch_every_20_sec.process_and_upload_to_s3 scheduled__2024-07-18T00:16:20+00:00 [queued]>
+[2024-07-18T15:21:38.395+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: upload_a_batch_every_20_sec.process_and_upload_to_s3 scheduled__2024-07-18T00:16:20+00:00 [queued]>
+[2024-07-18T15:21:38.395+0530] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-18T15:21:38.402+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): process_and_upload_to_s3> on 2024-07-18 00:16:20+00:00
+[2024-07-18T15:21:38.405+0530] {standard_task_runner.py:64} INFO - Started process 50829 to run task
+[2024-07-18T15:21:38.407+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'upload_a_batch_every_20_sec', 'process_and_upload_to_s3', 'scheduled__2024-07-18T00:16:20+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/car_insurance_policy_dag.py', '--cfg-path', '/tmp/tmpus53slt_']
+[2024-07-18T15:21:38.407+0530] {standard_task_runner.py:91} INFO - Job 54: Subtask process_and_upload_to_s3
+[2024-07-18T15:21:38.422+0530] {task_command.py:426} INFO - Running <TaskInstance: upload_a_batch_every_20_sec.process_and_upload_to_s3 scheduled__2024-07-18T00:16:20+00:00 [running]> on host growlt245
+[2024-07-18T15:21:38.449+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='upload_a_batch_every_20_sec' AIRFLOW_CTX_TASK_ID='process_and_upload_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2024-07-18T00:16:20+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-18T00:16:20+00:00'
+[2024-07-18T15:21:38.449+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-18T15:21:38.450+0530] {logging_mixin.py:188} INFO - Current working directory: /home/growlt245
+[2024-07-18T15:21:38.450+0530] {car_insurance_policy_dag.py:94} ERROR - Error in process_and_upload: [Errno 2] No such file or directory: '/home/growlt245/airflow/Amended_Insurance_Product_purchase_dataset.csv'
+[2024-07-18T15:21:38.450+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-18T15:21:38.451+0530] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/growlt245/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/growlt245/airflow/dags/car_insurance_policy_dag.py", line 47, in process_and_upload
+    df = pd.read_csv(LOCAL_CSV_FILE)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py", line 1024, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py", line 618, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py", line 1618, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py", line 1878, in _make_engine
+    self.handles = get_handle(
+  File "/usr/local/lib/python3.10/dist-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/home/growlt245/airflow/Amended_Insurance_Product_purchase_dataset.csv'
+[2024-07-18T15:21:38.453+0530] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=upload_a_batch_every_20_sec, task_id=process_and_upload_to_s3, run_id=scheduled__2024-07-18T00:16:20+00:00, execution_date=20240718T001620, start_date=20240718T095138, end_date=20240718T095138
+[2024-07-18T15:21:38.457+0530] {standard_task_runner.py:110} ERROR - Failed to execute job 54 for task process_and_upload_to_s3 ([Errno 2] No such file or directory: '/home/growlt245/airflow/Amended_Insurance_Product_purchase_dataset.csv'; 50829)
+[2024-07-18T15:21:38.499+0530] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-07-18T15:21:38.515+0530] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-18T15:21:38.515+0530] {local_task_job_runner.py:222} INFO - ::endgroup::
